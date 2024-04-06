@@ -1,40 +1,40 @@
-$bg-color: black;
-$font-color: white;
-$header-font: "Pixelify Sans", sans-serif;
-$header-font-weight: 400;
-$header-font-style: normal;
-
-$body-font: "Open Sans", sans-serif;
-$body-font-weight: 400;
-$body-font-style: normal;
-
+@use '../modules/variables';
 
 body {
-    background-color: $bg-color;
-    color: $font-color;
-    font-family: $body-font;
-    font-weight: $body-font-weight;
-    font-style: $body-font-style;
+    background-color: variables.$bg-color;
+    color: variables.$font-color;
+    font-family: variables.$body-font;
+    font-weight: variables.$body-font-weight;
+    font-style: variables.$body-font-style;
+
+    margin: 0 auto;
 
     // make body a flex container
     // display things in column
     display: flex;
     flex-direction: column;
+    width: 100dvw;
     justify-content: center;
     align-items: center;
-    width: 100dvw;
 
     h1 {
-        font-family: $header-font;
-        font-weight: $header-font-weight;
-        font-style: $header-font-style;
+        font-family: variables.$header-font;
+        font-weight: variables.$header-font-weight;
+        font-style: variables.$header-font-style;
         font-size: 4rem;
     }
 
     h2 {
-        font-family: $header-font;
-        font-weight: $header-font-weight;
-        font-style: $header-font-style;
+        font-family: variables.$header-font;
+        font-weight: variables.$header-font-weight;
+        font-style: variables.$header-font-style;
         font-size: 2rem;
+    }
+
+    section {
+        // makes ALL sections 100% of the device height
+        height: 100dvh;
+        width: 90dvw;
+
     }
 }

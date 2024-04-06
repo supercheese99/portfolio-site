@@ -15,7 +15,7 @@
         <!-- google fonts for default body fonts -->
     </head>
     <body id="top">
-        <header>
+        <header id="main-header">
             <nav class="site-nav">
                 <ul>
                     <li><a href="#top"><img src="">home</a></li>
@@ -30,7 +30,9 @@
                 <div>
                     <header>
                         <h1>hello.</h1>
-                        <p>can you hear me? good. now you can check out my site and see for yourself.</p>
+                        <p>can you hear me? good!</p>
+                        <p>welcome to my intergalactic spaceship.</p>
+                        <p>follow the nav on the bottom to explore the different compartments!</p>
                     </header>
                 </div>
 
@@ -38,13 +40,33 @@
             </section>
 
             <section id="about">
-                <div>
-                    <header>
-                        <h2>who am i?</h2>
-                    </header>
+                <div class="slider-container">
+                    <div class="my-slides fade">
+                        <header>
+                            <h2>who am i?</h2>
+                        </header>
+                        <div class="about-text">I'm a front-end web developer with background in 3D modeling.</div>
+                    </div>
+
+                    <div class="my-slides fade">
+                        <header>
+                            <h2>what are my skills?</h2>
+                        </header>
+                        <div class="about-text"></div>
+                    </div>
+
+                    <div class="my-slides fade">
+                        <header>
+                            <h2>...and interests?</h2>
+                        </header>
+                        <div class="about-text"></div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
                 </div>
 
-                <div class="slider"></div>
             </section>
 
             <section id="projects">
