@@ -45,6 +45,26 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
+}
+nav ul li .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+section#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  max-width: 100dvw;
+  position: relative;
+  margin: auto;
+}
+.slider-container .my-slides {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=styles.css.map */

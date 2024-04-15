@@ -2,13 +2,13 @@
 
 
 .slider-container {
-    
+
     max-width: 100dvw;
     position: relative;
     margin: auto;
 
     .my-slides {
-        display: none;
+        display: inline-block;
     }
 
 
