@@ -13,7 +13,6 @@ body {
     // display things in column
     display: flex;
     flex-direction: column;
-    width: 100dvw;
     justify-content: center;
     align-items: center;
 
@@ -31,9 +30,7 @@ body {
         font-size: 2rem;
     }
 
-    section {
-        // makes ALL sections 100% of the device height
+    div#home, div#about, div#projects, div#contact {
         height: 100dvh;
-        width: 90dvw;
     }
 }
