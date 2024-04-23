@@ -30,6 +30,12 @@ body {
         font-size: 2rem;
     }
 
+    h3 {
+        font-family: variables.$header-font;
+        font-weight: variables.$header-font-weight;
+        font-style: variables.$header-font-style;
+    }
+
     div#home, div#about, div#projects, div#contact {
         height: 100dvh;
     }
