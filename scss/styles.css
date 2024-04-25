@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #00000D;
+  color: #E2B5E6;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -15,6 +15,7 @@ body h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 4rem;
+  background-color: #00000D;
 }
 body h2 {
   font-family: "Pixelify Sans", sans-serif;
@@ -39,10 +40,10 @@ body div#home, body div#about, body div#projects, body div#contact {
 .site-nav {
   position: fixed;
   bottom: 0px;
-  background-color: black;
+  background-color: #00000D;
   z-index: 1;
   padding: 0.5rem 1rem;
-  border: 2px solid white;
+  border: 2px solid #E2B5E6;
 }
 
 nav ul {
@@ -56,8 +57,12 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #E2B5E6;
   text-transform: uppercase;
+}
+nav ul li a img {
+  width: 50px;
+  height: auto;
 }
 nav ul li .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -96,7 +101,7 @@ nav ul li .material-symbols-outlined {
   width: auto;
   margin-top: -22px;
   padding: 0.5rem;
-  color: white;
+  color: #E2B5E6;
   font-family: "Pixelify Sans", sans-serif;
   font-size: 3rem;
   transition: 0.6s ease;
@@ -116,6 +121,22 @@ nav ul li .material-symbols-outlined {
   to {
     opacity: 1;
   }
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vw;
+  margin: 0 auto;
+  position: absolute;
+  flex-wrap: wrap;
+  flex-direction: column;
+  line-height: 0;
+}
+section div {
+  width: 3.125%;
+  height: 5.5555555556%;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

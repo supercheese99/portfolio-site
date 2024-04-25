@@ -1,5 +1,5 @@
-$bg-color: black;
-$font-color: white;
+$bg-color: #00000D;
+$font-color: #E2B5E6;
 $header-font: "Pixelify Sans", sans-serif;
 $header-font-weight: 400;
 $header-font-style: normal;
@@ -7,3 +7,15 @@ $header-font-style: normal;
 $body-font: "Open Sans", sans-serif;
 $body-font-weight: 400;
 $body-font-style: normal;
+
+// background variables
+$cols: 12;
+$rows: 12;
+$bodySize: 100vw + (100/$cols); // fullwidth, starting on the edges
+$dotSize: 1.75vw;
+$gutter: 3vw;
+$lineWeight: 2px;
+$speed: 2.5s;
+
+$bg: transparent;
+$fg: #17E3D2;

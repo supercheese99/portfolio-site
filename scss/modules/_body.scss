@@ -1,4 +1,5 @@
 @use '../modules/variables';
+@use './mixins';
 
 body {
     background-color: variables.$bg-color;
@@ -21,6 +22,7 @@ body {
         font-weight: variables.$header-font-weight;
         font-style: variables.$header-font-style;
         font-size: 4rem;
+        background-color: variables.$bg-color;
     }
 
     h2 {

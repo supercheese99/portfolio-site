@@ -13,8 +13,7 @@
     background-color: variables.$bg-color;
     z-index: 1;
     padding: .5rem 1rem;
-    border: 2px solid white;
-    // border-radius: 15px 15px 0px 0px;
+    border: 2px solid variables.$font-color;
 }
 
 nav {
@@ -32,6 +31,11 @@ nav {
                 text-decoration: none;
                 color: variables.$font-color;
                 text-transform: uppercase;
+
+                img {
+                    width: 50px;
+                    height: auto;
+                }
             }
 
             .material-symbols-outlined {

@@ -1,0 +1,19 @@
+section {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vw;
+    margin: 0 auto;
+    position: absolute;
+    // display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 0;
+
+    div {
+        width: calc(100% / 16 / 2);
+        height: calc(100% / 9 / 2);
+        opacity: 1;
+        // background-color: #FFF;
+        // display: inline-block;
+    }
+}
