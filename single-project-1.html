@@ -4,6 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- meta description -->
+        <!-- favicons -->
+        <link rel="icon" href="favicon.ico" sizes="any"> 
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+        <link rel="manifest" href="site.webmanifest" />
         <!-- custom styles -->
         <link rel="stylesheet" href="scss/styles.css">
         <!-- fonts -->
@@ -13,9 +18,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&family=Zilla+Slab:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
         <!-- google icons -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+        <!-- swiper bundle -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <!-- scripts -->
-        <script defer src="./scripts/slider.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="./scripts/swiper.js"></script>
     </head>
     <body id="top">
         <header class="top-header">
@@ -24,7 +31,7 @@
         <header class="main-header" id="main-header">
             <nav class="site-nav">
                 <ul>
-                    <li><a href="index.html"><img src="">home</a></li>
+                    <li><a href="index.html"><img src="./images/logo-001-menu.png" id="menu-home-logo"></a></li>
                     <li><a href="index.html #about">
                         <span class="material-symbols-outlined">
                         arrow_downward_alt
@@ -48,8 +55,30 @@
             </nav>
         </header>
         <main>
-            <div class="project-images">
-                <img src="#">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/sm-home-desktop.png" alt="Desktop home" class="desktop">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/sm-single-desktop.png" alt="Desktop single movie" class="desktop">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/sm-fav-desktop.png" alt="Desktop favorites" class="desktop">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/sm-home-mobile.png" alt="Mobile home" class="mobile">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/sm-single-mobile.png" alt="Mobile single movie" class="mobile">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/sm-fav-mobile.png" alt="Mobile favorites" class="mobile">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
 
             <div class="project-links">
@@ -60,11 +89,19 @@
             <div class="project-info">
                 <div>
                     <h3>What was my role in the project?</h3>
-                    <p></p>
+                    <p>I filled in the roles of Web Designer, UX/UI Designer and Web Developer. The database is coded using React JS and the data is fetched from The Movie Database API.</p>
                 </div>
                 <div>
                     <h3>What was the process?</h3>
+                    <p>At first I drew low-fidelity wireframe on paper to get a sense of where to place the images and sliders. Then I went on to create a high-fidelity mockup in Adobe Photoshop and a working prototype in Adobe XD.</p>
+                    <p>The next step was to set up the project in React JS. After that I started coding.</p>
+                    <p>To be fair, it was quite a challenge, there were many hiccups along the way, such as not being able to connect to the API at first. Fortunately, after that I managed to quite easily fetch the desired data.</p>
                     <p></p>
+                </div>
+                <div>
+                    <h3>What have I learned?</h3>
+                    <p>I have learned how to work with APIs and how to make React components interact with each other.</p>
+                    <p>I also gained a lot of confidence in working with frameworks with which I'm unfamiliar.</p>
                 </div>
                 
             </div>

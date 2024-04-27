@@ -1,0 +1,47 @@
+@use './variables';
+
+.swiper {
+    max-height: 100dvh;
+    max-width: 40dvw;
+    background-color: variables.$font-color;
+    .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .desktop {
+        display: block;
+        width: 75%;
+        height: 75%;
+        object-fit: cover;
+        padding: 1rem 0rem;
+        
+        }
+
+        .mobile {
+            height: 50%;
+            width: auto;
+        }
+      }
+
+      .swiper-button-next, .swiper-button-prev {
+        color: white;
+      }
+
+      .swiper-scrollbar {
+        color: white;
+      }
+
+    // .desktop {
+    //     width:350px;
+    //     height: 220px;
+    //     object-fit: contain;
+    // }
+
+    // .mobile {
+    //     width: auto;
+    //     height: 220px;
+    // }
+}

@@ -41,4 +41,9 @@ body {
     div#home, div#about, div#projects, div#contact {
         height: 100dvh;
     }
+
+    a, a:visited {
+        text-decoration: none;
+        color: variables.$link-color;
+    }
 }
