@@ -10,23 +10,27 @@ body {
   justify-content: center;
   align-items: center;
 }
+body main {
+  width: 80dvw;
+  background: linear-gradient(90deg, rgba(0, 0, 13, 0.1628852224) 0%, rgba(0, 0, 13, 0.6754902645) 17%, rgba(0, 0, 13, 0.779131721) 35%, rgba(0, 0, 13, 0.8071429255) 65%, rgba(0, 0, 13, 0.7175070712) 84%, rgba(0, 0, 13, 0) 100%);
+}
 body h1 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 4rem;
-  background-color: #00000D;
 }
 body h2 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 body h3 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 2rem;
 }
 body div#home, body div#about, body div#projects, body div#contact {
   height: 100dvh;
@@ -34,6 +38,30 @@ body div#home, body div#about, body div#projects, body div#contact {
 body a, body a:visited {
   text-decoration: none;
   color: #ACD6F5;
+}
+
+#bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  line-height: 0;
+  z-index: 2;
+}
+
+#bg-image {
+  width: 3.125%;
+  height: 5.5555555556%;
+  opacity: 1;
+  display: inline-block;
+}
+
+.top-header-home {
+  position: absolute;
+  top: 0;
 }
 
 #main-header {
@@ -77,6 +105,7 @@ nav ul li .material-symbols-outlined {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 50;
 }
 
 .arrows-right {
@@ -143,45 +172,38 @@ section div {
   opacity: 1;
 }
 
-.swiper {
-  max-height: 100dvh;
-  max-width: 40dvw;
-  background-color: #E2B5E6;
-}
-.swiper .swiper-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper .swiper-slide .desktop {
-  display: block;
-  width: 75%;
-  height: 75%;
-  object-fit: cover;
-  padding: 1rem 0rem;
-}
-.swiper .swiper-slide .mobile {
-  height: 50%;
-  width: auto;
-}
-.swiper .swiper-button-next, .swiper .swiper-button-prev {
-  color: white;
-}
-.swiper .swiper-scrollbar {
-  color: white;
-}
-
 :root {
   --pixel-bg: #E2B5E6; /* Inner background color */
   --pixel-border: white; /* Inner border color: */
   --pixel-border-2: #e79189; /* Middle border color: */
   --pixel-border-3: var(--pixel-border); /* Outer border color */
-  --pixel: .125rem; /* Pixel size */
+  --pixel: 0.5rem; /* Pixel size */
 }
 
 .swiper {
+  max-height: 100dvh;
+  max-width: 40dvw;
   box-shadow: 0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--pixel-bg), 0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--pixel-bg), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2) var(--pixel-bg), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2) var(--pixel-bg), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4) var(--pixel-bg), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4) var(--pixel-bg), 0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -6) var(--pixel-bg), 0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -6) var(--pixel-bg), calc(var(--pixel) * -1) 0 0 0 var(--pixel-border), var(--pixel) 0 0 0 var(--pixel-border), 0 calc(var(--pixel) * -2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * 2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border), 0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border), calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2), calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 0 var(--pixel) 0 var(--pixel) var(--pixel-border-2), 0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), 0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3), calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3), 0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3), 0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);
+}
+.swiper .swiper-slide {
+  text-align: center;
+  display: flex;
+  background-color: #E2B5E6;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-slide .desktop {
+  display: block;
+  width: auto;
+  height: 450px;
+  object-fit: cover;
+}
+.swiper .swiper-slide .mobile {
+  height: 450px;
+  width: auto;
+}
+.swiper .swiper-button-next, .swiper .swiper-button-prev {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

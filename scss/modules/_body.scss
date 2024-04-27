@@ -7,7 +7,6 @@ body {
     font-family: variables.$body-font;
     font-weight: variables.$body-font-weight;
     font-style: variables.$body-font-style;
-
     margin: 0 auto;
 
     // make body a flex container
@@ -17,25 +16,30 @@ body {
     justify-content: center;
     align-items: center;
 
+    main {
+        width: 80dvw;
+        background: linear-gradient(90deg, rgba(0,0,13,0.16288522244835435) 0%, rgba(0,0,13,0.675490264465161) 17%, rgba(0,0,13,0.7791317210477942) 35%, rgba(0,0,13,0.8071429255295868) 65%, rgba(0,0,13,0.7175070711878502) 84%, rgba(0,0,13,0) 100%);
+    }
+
     h1 {
         font-family: variables.$header-font;
         font-weight: variables.$header-font-weight;
         font-style: variables.$header-font-style;
         font-size: 4rem;
-        background-color: variables.$bg-color;
     }
 
     h2 {
         font-family: variables.$header-font;
         font-weight: variables.$header-font-weight;
         font-style: variables.$header-font-style;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     h3 {
         font-family: variables.$header-font;
         font-weight: variables.$header-font-weight;
         font-style: variables.$header-font-style;
+        font-size: 2rem;
     }
 
     div#home, div#about, div#projects, div#contact {
@@ -46,4 +50,26 @@ body {
         text-decoration: none;
         color: variables.$link-color;
     }
+
+}
+
+#bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vw;
+    margin: 0 auto;
+    // display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 0;
+    z-index: 2;
+}
+
+#bg-image {
+    width: calc(100% / 16 / 2);
+    height: calc(100% / 9 / 2);
+    opacity: 1;
+    // background-color: #FFF;
+    display: inline-block;
 }

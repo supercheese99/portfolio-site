@@ -12,12 +12,14 @@ const colors = [
 
 for (let i = 0; i < 144*4; i++) {
     let squareEl = document.createElement('div')
-    document.querySelector('section').appendChild(squareEl)
+    squareEl.id = "bg-image";
+    document.getElementById('bg').appendChild(squareEl)
+    console.log("The new div:", squareEl)
 }
 
 function animateThing (element) {
     anime({
-         targets: element,
+         targets: "div.bg",
          // opacity: () => anime.random(25,100) / 100,
          backgroundColor: () => colors[anime.random(0, colors.length-1)],
          duration: () => anime.random(200, 1000),

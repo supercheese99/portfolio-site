@@ -13,7 +13,7 @@ $body-font-style: normal;
 // background variables
 $cols: 12;
 $rows: 12;
-$bodySize: 100vw + (100/$cols); // fullwidth, starting on the edges
+$bodySize: 100vw + calc(100 / $cols); // fullwidth, starting on the edges
 $dotSize: 1.75vw;
 $gutter: 3vw;
 $lineWeight: 2px;
