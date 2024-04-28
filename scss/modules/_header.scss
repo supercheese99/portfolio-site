@@ -10,6 +10,12 @@
 #main-header {
     height: 50px;
     width: 300px;
+
+    @media (min-width: variables.$breakpoint-medium) {
+        height: 70px;
+        width: 500px;
+    }
+
 }
 
 .site-nav {
@@ -17,8 +23,18 @@
     bottom: 0px;
     background-color: variables.$bg-color;
     z-index: 60;
-    padding: .5rem 1rem;
+    padding: .5rem;
     border: 2px solid variables.$font-color;
+
+    @media (min-width: variables.$breakpoint-small) {
+        padding: .5rem 1rem;
+    }
+
+    @media (min-width: variables.$breakpoint-medium) {
+        padding: .5rem;
+        height: 70px;
+        width: 500px;
+    }
 }
 
 nav {
@@ -32,14 +48,32 @@ nav {
         
         li {
             display: inline;
+
             a {
                 text-decoration: none;
                 color: variables.$font-color;
                 text-transform: uppercase;
+                font-family: variables.$header-font;
+
+                @media (min-width: variables.$breakpoint-medium) {
+                    font-size: 1.75rem;
+                    padding-right: .75rem;
+                }
 
                 img {
-                    width: 50px;
+                    width: 25px;
                     height: auto;
+
+                    @media (min-width: variables.$breakpoint-small) {
+                        width: 25px;
+                        height: auto;
+                    }
+            
+                    @media (min-width: variables.$breakpoint-medium) {
+                        width: 50px;
+                        height: auto;
+                        padding-top: .5rem;
+                    }
                 }
             }
 
