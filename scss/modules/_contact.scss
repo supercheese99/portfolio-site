@@ -1,0 +1,26 @@
+@use './variables';
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+
+    .social-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        #icon-1 {
+            column-span: 1;
+        }
+
+        #icon-2 {
+            column-span: 2;
+        }
+
+        #icon-3 {
+            column-span: 3;
+        }
+    }
+}

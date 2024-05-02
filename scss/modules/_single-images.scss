@@ -10,12 +10,12 @@
 
 .swiper {
     max-height: 100dvh;
-    max-width: 40dvw;
+    max-width: 85dvw;
+	margin: 2rem 0rem;
     
     .swiper-slide {
         text-align: center;
         display: flex;
-        // background-color: variables.$font-color;
         justify-content: center;
         align-items: center;
 

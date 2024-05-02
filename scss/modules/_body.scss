@@ -17,7 +17,7 @@ body {
     align-items: center;
 
     main {
-        width: 80dvw;
+        width: 95dvw;
         z-index: 50;
     }
 
@@ -44,9 +44,10 @@ body {
         font-family: variables.$header-font;
         font-weight: variables.$header-font-weight;
         font-style: variables.$header-font-style;
+        font-size: 2.25rem;
 
         @media (min-width: variables.$breakpoint-small) {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         @media (min-width: variables.$breakpoint-medium) {
@@ -62,11 +63,17 @@ body {
         font-family: variables.$header-font;
         font-weight: variables.$header-font-weight;
         font-style: variables.$header-font-style;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
-    div#home, div#about, div#projects, div#contact {
+    div#home, div#contact {
         height: 100dvh;
+        // width: auto;
+    }
+
+    div#about, div#projects {
+        height: 200dvh;
+        margin: 0rem 0rem 2rem 0rem;
     }
 
     a, a:visited {

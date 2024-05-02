@@ -11,7 +11,7 @@ body {
   align-items: center;
 }
 body main {
-  width: 80dvw;
+  width: 95dvw;
   z-index: 50;
 }
 body h1 {
@@ -39,10 +39,11 @@ body h2 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 2.25rem;
 }
 @media (min-width: 500px) {
   body h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 1000px) {
@@ -59,10 +60,14 @@ body h3 {
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-body div#home, body div#about, body div#projects, body div#contact {
+body div#home, body div#contact {
   height: 100dvh;
+}
+body div#about, body div#projects {
+  height: 200dvh;
+  margin: 0rem 0rem 2rem 0rem;
 }
 body a, body a:visited {
   text-decoration: none;
@@ -176,10 +181,6 @@ nav ul li .material-symbols-outlined {
   z-index: 50;
 }
 
-.arrows-right {
-  text-align: center;
-}
-
 #about {
   display: flex;
   flex-direction: column;
@@ -188,18 +189,11 @@ nav ul li .material-symbols-outlined {
   z-index: 50;
 }
 
-.swiper {
-  max-height: 70dvh;
-  max-width: 60dvw;
+.arrows-right-div {
+  margin: 1rem 0rem;
 }
-.swiper .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.swiper .swiper-button-next, .swiper .swiper-button-prev {
-  color: white;
+.arrows-right-div .arrows-right {
+  text-align: center;
 }
 
 .full-wh {
@@ -349,6 +343,18 @@ nav ul li .material-symbols-outlined {
   align-items: center;
   z-index: 50;
 }
+#projects .gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+#projects .gallery #project-1, #projects .gallery #project-2, #projects .gallery #project-3 {
+  text-align: center;
+}
+#projects .gallery #project-1 img, #projects .gallery #project-2 img, #projects .gallery #project-3 img {
+  width: 250px;
+}
 
 :root {
   --pixel-bg: #E2B5E6; /* Inner background color */
@@ -360,7 +366,8 @@ nav ul li .material-symbols-outlined {
 
 .swiper {
   max-height: 100dvh;
-  max-width: 40dvw;
+  max-width: 85dvw;
+  margin: 2rem 0rem;
   box-shadow: calc(var(--pixel) * -1) 0 0 0 var(--pixel-border), var(--pixel) 0 0 0 var(--pixel-border), 0 calc(var(--pixel) * -2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * 2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border), 0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border), calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2), calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 0 var(--pixel) 0 var(--pixel) var(--pixel-border-2), 0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), 0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3), calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3), 0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3), 0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);
 }
 .swiper .swiper-slide {
