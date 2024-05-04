@@ -2,39 +2,17 @@
 
 // nav styles
 
-.top-header-home {
-    position: absolute;
-    top: 0;
-}
-
-#main-header {
-    height: 50px;
-    width: 300px;
-
-    @media (min-width: variables.$breakpoint-medium) {
-        height: 70px;
-        width: 500px;
-    }
-
-}
-
 .site-nav {
     position: fixed;
     bottom: 0px;
+    left: 0;
+    right: 0;
+    width: fit-content;
     background-color: variables.$bg-color;
     z-index: 60;
     padding: .5rem;
     border: 2px solid variables.$font-color;
 
-    @media (min-width: variables.$breakpoint-small) {
-        padding: .5rem 1rem;
-    }
-
-    @media (min-width: variables.$breakpoint-medium) {
-        padding: .5rem;
-        height: 70px;
-        width: 500px;
-    }
 }
 
 nav {
@@ -56,7 +34,7 @@ nav {
                 font-family: variables.$header-font;
 
                 @media (min-width: variables.$breakpoint-medium) {
-                    font-size: 1.75rem;
+                    font-size: 1rem;
                     padding-right: .75rem;
                 }
 
@@ -70,7 +48,7 @@ nav {
                     }
             
                     @media (min-width: variables.$breakpoint-medium) {
-                        width: 50px;
+                        width: 25px;
                         height: auto;
                         padding-top: .5rem;
                     }

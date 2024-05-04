@@ -65,8 +65,12 @@ body h3 {
 body div#home, body div#contact {
   height: 100dvh;
 }
-body div#about, body div#projects {
-  height: 200dvh;
+body div#about {
+  height: 110dvh;
+  margin: 0rem 0rem 2rem 0rem;
+}
+body div#projects {
+  height: 150dvh;
   margin: 0rem 0rem 2rem 0rem;
 }
 body a, body a:visited {
@@ -94,41 +98,16 @@ body a, body a:visited {
   display: inline-block;
 }
 
-.top-header-home {
-  position: absolute;
-  top: 0;
-}
-
-#main-header {
-  height: 50px;
-  width: 300px;
-}
-@media (min-width: 1000px) {
-  #main-header {
-    height: 70px;
-    width: 500px;
-  }
-}
-
 .site-nav {
   position: fixed;
   bottom: 0px;
+  left: 0;
+  right: 0;
+  width: fit-content;
   background-color: #00000D;
   z-index: 60;
   padding: 0.5rem;
   border: 2px solid #E2B5E6;
-}
-@media (min-width: 500px) {
-  .site-nav {
-    padding: 0.5rem 1rem;
-  }
-}
-@media (min-width: 1000px) {
-  .site-nav {
-    padding: 0.5rem;
-    height: 70px;
-    width: 500px;
-  }
 }
 
 nav ul {
@@ -148,7 +127,7 @@ nav ul li a {
 }
 @media (min-width: 1000px) {
   nav ul li a {
-    font-size: 1.75rem;
+    font-size: 1rem;
     padding-right: 0.75rem;
   }
 }
@@ -164,7 +143,7 @@ nav ul li a img {
 }
 @media (min-width: 1000px) {
   nav ul li a img {
-    width: 50px;
+    width: 25px;
     height: auto;
     padding-top: 0.5rem;
   }
@@ -179,6 +158,199 @@ nav ul li .material-symbols-outlined {
   justify-content: center;
   align-items: center;
   z-index: 50;
+}
+#home .welcome {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 80%);
+  text-shadow: 0 0 5px #0af, 0 0 15px #0af, 0 0 30px #0af;
+}
+#home .home-text {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, -60%);
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.platform {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: platform 8s infinite ease-in-out;
+}
+@keyframes platform {
+  0%, 100% {
+    transform: translateY(-3em);
+  }
+  50% {
+    transform: translateY(3em);
+  }
+}
+
+.plate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+.plate:nth-child(1) {
+  width: 16em;
+  height: 16em;
+  background-image: radial-gradient(#444444, #111);
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(2em);
+}
+.plate:nth-child(2) {
+  width: 14em;
+  height: 14em;
+  background-image: radial-gradient(#000, #222);
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(-2em);
+}
+
+.panel {
+  position: absolute;
+  font-family: "Pixelify Sans", sans-serif;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 5em;
+  clip-path: polygon(0 0, 100% 0, 93.25% 100%, 6.75% 100%);
+  overflow: hidden;
+  animation: panalRotate 60s infinite linear;
+}
+@keyframes panalRotate {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  from {
+    transform: translate(-50%, calc(-50% + 0.25em)) rotateY(0) translateZ(7em) rotateX(-15deg);
+  }
+  to {
+    transform: translate(-50%, calc(-50% + 0.25em)) rotateY(360deg) translateZ(7em) rotateX(-15deg);
+  }
+}
+.panel:nth-child(1) {
+  animation-delay: 0s;
+}
+.panel:nth-child(1)::after {
+  animation-delay: 0s;
+}
+.panel:nth-child(2) {
+  animation-delay: -3.75s;
+}
+.panel:nth-child(2)::after {
+  animation-delay: -1.25s;
+}
+.panel:nth-child(3) {
+  animation-delay: -7.5s;
+}
+.panel:nth-child(3)::after {
+  animation-delay: -2.5s;
+}
+.panel:nth-child(4) {
+  animation-delay: -11.25s;
+}
+.panel:nth-child(4)::after {
+  animation-delay: -3.75s;
+}
+.panel:nth-child(5) {
+  animation-delay: -15s;
+}
+.panel:nth-child(5)::after {
+  animation-delay: -5s;
+}
+.panel:nth-child(6) {
+  animation-delay: -18.75s;
+}
+.panel:nth-child(6)::after {
+  animation-delay: -6.25s;
+}
+.panel:nth-child(7) {
+  animation-delay: -22.5s;
+}
+.panel:nth-child(7)::after {
+  animation-delay: -7.5s;
+}
+.panel:nth-child(8) {
+  animation-delay: -26.25s;
+}
+.panel:nth-child(8)::after {
+  animation-delay: -8.75s;
+}
+.panel:nth-child(9) {
+  animation-delay: -30s;
+}
+.panel:nth-child(9)::after {
+  animation-delay: -10s;
+}
+.panel:nth-child(10) {
+  animation-delay: -33.75s;
+}
+.panel:nth-child(10)::after {
+  animation-delay: -11.25s;
+}
+.panel:nth-child(11) {
+  animation-delay: -37.5s;
+}
+.panel:nth-child(11)::after {
+  animation-delay: -12.5s;
+}
+.panel:nth-child(12) {
+  animation-delay: -41.25s;
+}
+.panel:nth-child(12)::after {
+  animation-delay: -13.75s;
+}
+.panel:nth-child(13) {
+  animation-delay: -45s;
+}
+.panel:nth-child(13)::after {
+  animation-delay: -15s;
+}
+.panel:nth-child(14) {
+  animation-delay: -48.75s;
+}
+.panel:nth-child(14)::after {
+  animation-delay: -16.25s;
+}
+.panel:nth-child(15) {
+  animation-delay: -52.5s;
+}
+.panel:nth-child(15)::after {
+  animation-delay: -17.5s;
+}
+.panel:nth-child(16) {
+  animation-delay: -56.25s;
+}
+.panel:nth-child(16)::after {
+  animation-delay: -18.75s;
+}
+.panel::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "Oliwia Wegner - Web Developer";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  white-space: nowrap;
+  text-shadow: 0 0 5px #0af, 0 0 15px #0af, 0 0 30px #0af;
+  animation: textMove 20s infinite linear;
+}
+@keyframes textMove {
+  from {
+    transform: translate(1rem, -50%);
+  }
+  to {
+    transform: translate(-42.64rem, -50%);
+  }
 }
 
 #about {
@@ -207,15 +379,7 @@ nav ul li .material-symbols-outlined {
 .bg-animation {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.bg-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
+  left: -50%;
   width: 100%;
   height: 100%;
 }
@@ -356,6 +520,27 @@ nav ul li .material-symbols-outlined {
   width: 250px;
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+#contact .social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#contact .social-icons #icon-1 {
+  column-span: 1;
+}
+#contact .social-icons #icon-2 {
+  column-span: 2;
+}
+#contact .social-icons #icon-3 {
+  column-span: 3;
+}
+
 :root {
   --pixel-bg: #E2B5E6; /* Inner background color */
   --pixel-border: #00000D; /* Inner border color: */
@@ -365,7 +550,7 @@ nav ul li .material-symbols-outlined {
 }
 
 .swiper {
-  max-height: 100dvh;
+  max-height: 90dvh;
   max-width: 85dvw;
   margin: 2rem 0rem;
   box-shadow: calc(var(--pixel) * -1) 0 0 0 var(--pixel-border), var(--pixel) 0 0 0 var(--pixel-border), 0 calc(var(--pixel) * -2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * 2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border), 0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border), calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2), calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 0 var(--pixel) 0 var(--pixel) var(--pixel-border-2), 0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), 0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3), calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3), 0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3), 0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);

@@ -6,4 +6,112 @@
     justify-content: center;
     align-items: center;
     z-index: 50;
+
+    .welcome {
+      position: absolute;
+      top: 0;
+      transform: translate(-50%, 80%);
+      text-shadow:
+      0 0 5px #0af,
+      0 0 15px #0af,
+      0 0 30px #0af;
+    }
+
+    .home-text {
+      position: absolute;
+      bottom: 0;
+      transform: translate(-50%, -60%);
+    }
+}
+
+// floating panels! yay! Code from https://codepen.io/amit_sheen/pen/mdmJNYz
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+$speed: 20s;
+
+.platform {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: platform $speed*0.4 infinite ease-in-out;
+
+  @keyframes platform {
+    0%, 100% { transform: translateY(-3em);}
+    50% { transform: translateY(3em);}
+  }
+}
+
+.plate {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+
+  &:nth-child(1) {
+    width: 16em; height: 16em;
+    background-image: radial-gradient(#444444, #111);
+    transform: translate(-50%, -50%) rotateX(90deg) translateZ(2em);
+  }
+  &:nth-child(2) {
+    width: 14em; height: 14em;
+    background-image: radial-gradient(#000, #222);
+    transform: translate(-50%, -50%) rotateX(90deg) translateZ(-2em);
+  }
+
+}
+
+.panel {
+  position: absolute;
+  font-family: variables.$header-font;
+  top: 50%; left: 50%;
+  width: 3em; height: 5em;
+  clip-path: polygon(0 0, 100% 0, 93.25% 100%, 6.75% 100%);
+  // background-color: rgba(0, 0, 0, 0.733);
+  overflow: hidden;
+  animation: panalRotate $speed*3 infinite linear;
+
+  @keyframes panalRotate {
+
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.1; }
+
+    from { transform: translate(-50%, calc(-50% + 0.25em)) rotateY(0) translateZ(7em) rotateX(-15deg); }
+    to { transform: translate(-50%, calc(-50% + 0.25em)) rotateY(360deg) translateZ(7em) rotateX(-15deg); }
+  }
+
+  $count: 16;
+  @for $i from 0 to $count {
+    &:nth-child(#{$i + 1}) {
+      animation-delay: #{calc($speed / $count) * $i * -3};
+
+      &::after {
+        animation-delay: #{calc($speed / $count) * $i * -1};
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%; left: 50%;
+    content: "Oliwia Wegner - Web Developer";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2em;
+    white-space: nowrap;
+    // color: #0009;
+    text-shadow:
+      0 0 5px #0af,
+      0 0 15px #0af,
+      0 0 30px #0af;
+    animation: textMove $speed infinite linear;
+  }
+
+  @keyframes textMove {
+    from { transform: translate(1rem, -50%); }
+    to { transform: translate(-42.64rem, -50%); }
+  }
 }
