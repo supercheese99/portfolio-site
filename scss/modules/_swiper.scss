@@ -5,11 +5,11 @@
 	--pixel-border: #00000D; /* Inner border color: */
 	--pixel-border-2: #e79189; /* Middle border color: */
 	--pixel-border-3: var(--pixel-border); /* Outer border color */
-	--pixel: 0.5rem; /* Pixel size */
+	--pixel: 0.2rem; /* Pixel size */
 }
 
 .swiper {
-    max-height: 90dvh;
+    max-height: 80dvh;
     max-width: 85dvw;
 	margin: 2rem 0rem;
     
@@ -23,7 +23,7 @@
         .desktop {
         display: block;
         width: auto;
-        height: 450px;
+        height: 350px;
         object-fit: cover;
         
         }

@@ -70,7 +70,7 @@ body div#about {
   margin: 0rem 0rem 2rem 0rem;
 }
 body div#projects {
-  height: 150dvh;
+  height: 160dvh;
   margin: 0rem 0rem 2rem 0rem;
 }
 body a, body a:visited {
@@ -513,13 +513,43 @@ nav ul li .material-symbols-outlined {
   justify-content: center;
   align-items: center;
 }
-#projects .gallery #project-1, #projects .gallery #project-2, #projects .gallery #project-3 {
+#projects .gallery .project {
+  margin: 2rem 0rem;
   text-align: center;
 }
-#projects .gallery #project-1 img, #projects .gallery #project-2 img, #projects .gallery #project-3 img {
-  width: 250px;
+#projects .gallery .project img {
+  width: 150px;
+}
+#projects .gallery #project-1, #projects .gallery #project-3 {
+  transform: rotate(10deg);
+}
+#projects .gallery #project-1:hover, #projects .gallery #project-3:hover {
+  animation: scaleUp 0.3s linear;
+}
+#projects .gallery #project-2 {
+  transform: rotate(-10deg);
 }
 
+@keyframes scaleUp1 {
+  from {
+    transform: rotate(10deg);
+    transform: scale(1);
+  }
+  to {
+    transform: rotate(0deg);
+    transform: scale(1.5);
+  }
+}
+@keyframes scaleUp2 {
+  from {
+    transform: rotate(10deg);
+    transform: scale(1);
+  }
+  to {
+    transform: rotate(0deg);
+    transform: scale(1.5);
+  }
+}
 #contact {
   display: flex;
   flex-direction: column;
@@ -546,11 +576,11 @@ nav ul li .material-symbols-outlined {
   --pixel-border: #00000D; /* Inner border color: */
   --pixel-border-2: #e79189; /* Middle border color: */
   --pixel-border-3: var(--pixel-border); /* Outer border color */
-  --pixel: 0.5rem; /* Pixel size */
+  --pixel: 0.2rem; /* Pixel size */
 }
 
 .swiper {
-  max-height: 90dvh;
+  max-height: 80dvh;
   max-width: 85dvw;
   margin: 2rem 0rem;
   box-shadow: calc(var(--pixel) * -1) 0 0 0 var(--pixel-border), var(--pixel) 0 0 0 var(--pixel-border), 0 calc(var(--pixel) * -2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * 2) 0 0 var(--pixel-border), 0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border), 0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border), 0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border), 0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border), calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2), calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 0 var(--pixel) 0 var(--pixel) var(--pixel-border-2), 0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2), 0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2), 0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2), 0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), 0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2), calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3), calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3), 0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3), 0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3), 0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);
@@ -564,7 +594,7 @@ nav ul li .material-symbols-outlined {
 .swiper .swiper-slide .desktop {
   display: block;
   width: auto;
-  height: 450px;
+  height: 350px;
   object-fit: cover;
 }
 .swiper .swiper-slide .mobile {
