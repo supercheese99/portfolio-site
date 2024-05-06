@@ -10,8 +10,28 @@
 
 .arrows-right-div {
   margin: 1rem 0rem;
+  background: -webkit-linear-gradient(0deg, rgba(114,255,246,1) 31%, rgba(255,65,206,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 5s infinite steps(1);
+
 
   .arrows-right {
     text-align: center;
+  }
+}
+
+// animation for color change
+
+@keyframes gradientFlow {
+  0%, 50%, 100% {
+    background: -webkit-linear-gradient(0deg, rgba(114,255,246,1) 31%, rgba(255,65,206,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25%, 75% {
+    background: -webkit-linear-gradient(0deg, rgba(255,65,206,1) 31%, rgba(114,255,246,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

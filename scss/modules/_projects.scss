@@ -12,6 +12,7 @@
         grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         align-items: center;
+        margin-top: 2rem;
 
         .project {
 
@@ -22,19 +23,30 @@
                 width: 150px;
             }
 
+            i {
+                font-size: 1.5rem;
+            }
+
         }
 
         #project-1, #project-3 {
             transform: rotate(10deg);
+            // transform: scale(1);
 
             &:hover {
-                animation: scaleUp 0.3s linear;
+                animation: scaleUp1 0.3s ease-in-out;
+                animation-fill-mode: forwards;
 
             }
         }
 
         #project-2 {
             transform: rotate(-10deg);
+
+            &:hover {
+                animation: scaleUp2 0.3s ease-in-out;
+                animation-fill-mode: forwards;
+            }
         }
     }
 }
@@ -54,7 +66,7 @@
 
 @keyframes scaleUp2 {
     from {
-        transform: rotate(10deg);
+        transform: rotate(-10deg);
         transform: scale(1);
     }
     to {

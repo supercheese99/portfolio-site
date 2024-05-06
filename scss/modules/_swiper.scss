@@ -16,16 +16,28 @@
     .swiper-slide {
         text-align: center;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
+        align-items: space-evenly;
 
+		.container {
+			height: auto;
+
+			p {
+				margin: 2rem 0rem;
+			}
+
+		}
+
+		i {
+			font-size: 2rem;
+			color: variables.$link-color;
+		}
 
         .desktop {
         display: block;
         width: auto;
         height: 350px;
         object-fit: cover;
-        
         }
 
         .mobile {
@@ -39,7 +51,6 @@
       }
 
       box-shadow:
-		
 		
 	/* Pixel Border Layer 1 */
 		calc(var(--pixel) * -1) 0 0 0 var(--pixel-border),
