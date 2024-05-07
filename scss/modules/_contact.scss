@@ -3,13 +3,13 @@
 #contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     z-index: 50;
 
     .social-icons {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
 
         #icon-1 {
             column-span: 1;

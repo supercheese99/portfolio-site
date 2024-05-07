@@ -12,10 +12,10 @@ $body-font-style: normal;
 
 // breakpoints
 $breakpoint-small: 500px;
-$breakpoint-medium: 1000px;
+$breakpoint-medium: 850px;
 $breakpoint-big: 1200px;
 
-// background variables
+// background variables for the stars
 $cols: 12;
 $rows: 12;
 $bodySize: 100vw + calc(100 / $cols); // fullwidth, starting on the edges

@@ -7,11 +7,10 @@
     bottom: 0px;
     left: 0;
     right: 0;
-    width: fit-content;
-    background-color: variables.$bg-color;
+    // width: fit-content;
+    background: linear-gradient(180deg, rgba(255,65,244,0) 0%, variables.$bg-color 24%, variables.$bg-color 100%);
     z-index: 60;
     padding: .5rem;
-    border: 2px solid variables.$font-color;
 
 }
 
@@ -34,7 +33,12 @@ nav {
                 font-family: variables.$header-font;
 
                 @media (min-width: variables.$breakpoint-medium) {
-                    font-size: 1rem;
+                    font-size: 1.5rem;
+                    padding-right: .75rem;
+                }
+
+                @media (min-width: variables.$breakpoint-big) {
+                    font-size: 2rem;
                     padding-right: .75rem;
                 }
 

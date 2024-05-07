@@ -1,0 +1,24 @@
+@use './variables';
+
+.project-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .project-links {
+        svg {
+            margin: 2rem;
+        }
+    }
+
+    .project-nav {
+        width: 95dvw;
+        display: flex;
+        justify-content: space-evenly;
+
+        .next-project {
+            text-align: right;
+        }
+    }
+}

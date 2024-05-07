@@ -1,5 +1,5 @@
 @use '../modules/variables';
-@use './mixins';
+@use '../modules/mixins';
 
 body {
     background-color: variables.$bg-color;
@@ -16,10 +16,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    // scss for the floating platform
-    // perspective: 75em;
-    // perspective-origin: 50% calc(50% - 5em);
-    // transform-style: preserve-3d; 
 
     main {
         width: 95dvw;
@@ -60,7 +56,7 @@ body {
         }
 
         @media (min-width: variables.$breakpoint-big) {
-            font-size: 4rem;
+            font-size: 3.2rem;
         }
     }
 

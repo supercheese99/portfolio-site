@@ -1,0 +1,52 @@
+@use "./variables";
+
+  // accordion code from https://codepen.io/amit_sheen/pen/OJpExOB
+
+  .accordion {
+    max-width: 90dvw;
+    text-align: center;
+    max-width: 3000px;
+
+    @media (min-width: variables.$breakpoint-medium) {
+      max-width: 80dvw;
+    }
+
+  }
+
+  article {
+    border: 1px solid #fff;
+    padding: 1em;
+    margin: 1em auto;
+
+    label {
+      
+      h2 {
+        color: variables.$link-color;
+      }
+    }
+
+    div {
+      margin-top: 1rem;
+
+      i {
+        font-size: 4rem;
+        margin: 2rem;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    position: fixed;
+    top: -100vh; left: -100vh;
+  
+    & ~ div {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s;
+    }
+  
+    &:checked ~ div {
+      max-height: 200px;
+    }
+  }

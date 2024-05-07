@@ -1,8 +1,4 @@
-// variables
-// @use './modules/variables';
-
 // partials/modules
-// @use './modules/about';
 @use './modules/body';
 @use './modules/header';
 @use './modules/home';
@@ -10,5 +6,7 @@
 @use './modules/bg';
 @use './modules/projects';
 @use './modules/contact';
+@use './modules/accordion';
+@use './modules/single-project';
 // swiper styles
 @use './modules/swiper';
